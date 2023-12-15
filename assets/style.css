@@ -1,0 +1,61 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-content-answer {
+    padding-top: 20px;
+    width: 600px;
+    text-align: justify;
+}
+
+/* DROPDOWN MENU */
+
+.faq-checkbox {
+    display: none;
+}
+
+.faq-content-answer {
+    display: none;
+}
+
+#faq1:checked + .faq-content-question + .faq-content-answer {
+    display: block;
+}
+
+#faq2:checked + .faq-content-question + .faq-content-answer {
+    display: block;
+}
+
+#faq3:checked + .faq-content-question + .faq-content-answer {
+    display: block;
+}
+
+#faq4:checked + .faq-content-question + .faq-content-answer {
+    display: block;
+}
+
+#faq5:checked + .faq-content-question + .faq-content-answer {
+    display: block;
+}
