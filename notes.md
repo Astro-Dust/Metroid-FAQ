@@ -1,5 +1,8 @@
 # Notes for the FAQ accordion project
 
+Favicon
+- Metroid icon
+
 Background
 - Image (Metroid related) or minimalistic gradient (Metroid color palette)
 

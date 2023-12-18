@@ -1,61 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #ffffff;
+  background: url('../assets/imgs/background-desktop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
-#container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.faq-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.container-title {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-.faq-content-answer {
-    padding-top: 20px;
-    width: 600px;
-    text-align: justify;
+.container-title > h1 {
+  color: #1e1e1e;
 }
 
-/* DROPDOWN MENU */
-
-.faq-checkbox {
-    display: none;
+p {
+  font-size: 14px;
+  color: #505050;
+  text-align: justify;
 }
 
-.faq-content-answer {
-    display: none;
+.btn-accordion {
+  background-color: #fff;
+  color: #202020;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
-#faq1:checked + .faq-content-question + .faq-content-answer {
-    display: block;
+.active,
+.btn-accordion:hover {
+  background-color: #ccc;
 }
 
-#faq2:checked + .faq-content-question + .faq-content-answer {
-    display: block;
+.btn-accordion::after {
+  content: "\02795";
+  float: right;
 }
 
-#faq3:checked + .faq-content-question + .faq-content-answer {
-    display: block;
+.active::after {
+  content: "\2796";
 }
 
-#faq4:checked + .faq-content-question + .faq-content-answer {
-    display: block;
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(226, 226, 226);
 }
 
-#faq5:checked + .faq-content-question + .faq-content-answer {
-    display: block;
+@media (max-width: 600px) {
+    body {
+        background: url('../assets/imgs/background-mobile.jpg');
+    }
+
+    .container {
+        margin-top: 40px;
+        padding: 10px;
+    }
 }
